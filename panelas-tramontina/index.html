@@ -572,6 +572,33 @@
     </div>
 
     <script>
+      // Gallery
+      let currentSlide = 0;
+      const totalSlides = 4;
+      const track = document.getElementById('galleryTrack');
+      const dots = document.querySelectorAll('.gallery-dot');
+      const thumbs = document.querySelectorAll('.gallery-thumb');
+      const counter = document.getElementById('galleryCounter');
+
+      function goToSlide(idx) {
+        currentSlide = idx;
+        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+        thumbs.forEach((t, i) => t.classList.toggle('active', i === idx));
+        counter.textContent = (idx + 1) + '/' + totalSlides;
+      }
+
+      let startX = 0, diffX = 0;
+      const slider = document.getElementById('gallerySlider');
+      slider.addEventListener('touchstart', e => { startX = e.touches[0].clientX; diffX = 0; }, { passive: true });
+      slider.addEventListener('touchmove', e => { diffX = e.touches[0].clientX - startX; }, { passive: true });
+      slider.addEventListener('touchend', () => {
+        if (Math.abs(diffX) > 50) {
+          if (diffX < 0 && currentSlide < totalSlides - 1) goToSlide(currentSlide + 1);
+          else if (diffX > 0 && currentSlide > 0) goToSlide(currentSlide - 1);
+        }
+      });
+
       // Heart
       document.getElementById('heartBtn').addEventListener('click', function() {
         this.classList.toggle('liked');
