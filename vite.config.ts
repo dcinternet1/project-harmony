@@ -17,15 +17,40 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     {
-      name: "fix-noscript-in-head",
-      transformIndexHtml(html: string) {
-        // Comenta <noscript> com <img> dentro do <head> para evitar erro parse5
-        return html.replace(/<noscript[\s>][\s\S]*?<\/noscript>/gi, (match) => {
-          if (match.includes("<img")) {
-            return `<!-- NOSCRIPT REMOVIDO PELO VITE -->\n<!-- ${match.replace(/--/g, "- -")} -->`;
+      name: "fix-html-compat",
+      transformIndexHtml: {
+        order: "pre" as const,
+        handler(html: string, ctx: { filename: string }) {
+          // 1. Remove <noscript> com <img> para evitar erro parse5
+          let result = html.replace(/<noscript[\s>][\s\S]*?<\/noscript>/gi, (match) => {
+            if (match.includes("<img")) {
+              return "";
+            }
+            return match;
+          });
+
+          // 2. Corrige caminhos absolutos /ml/aros/ para relativos
+          result = result.replace(/src="\/ml\/aros\/([^"]+)"/gi, (_match: string, p1: string) => {
+            // Extrai apenas o nome do arquivo da imagem
+            const parts = p1.split("/");
+            const fileName = parts[parts.length - 1];
+            return `src="images/${fileName}"`;
+          });
+
+          // 2. Injeta <base href> automaticamente baseado no caminho do arquivo
+          const relPath = path.relative(__dirname, ctx.filename);
+          const dirName = path.dirname(relPath).replace(/\\/g, "/");
+          if (dirName && dirName !== "." && !result.includes("<base ")) {
+            const basePath = `/${dirName}/`;
+            result = result.replace("<head>", `<head>\n    <base href="${basePath}" />`);
+            // Também injeta após <head> com atributos
+            if (!result.includes("<base ")) {
+              result = result.replace(/<head([^>]*)>/, `<head$1>\n    <base href="${basePath}" />`);
+            }
           }
-          return match;
-        });
+
+          return result;
+        },
       },
     },
     {
