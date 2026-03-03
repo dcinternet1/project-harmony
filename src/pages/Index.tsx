@@ -30,7 +30,7 @@ const categories = [
     icon: "fa-solid fa-shower",
     products: [
       { name: "Lavadora", highlight: "WAP Líder 2200", sub: "1750W", href: "/wap-lider-2200/", img: "/images/wap-lider-2200.png" },
-      { name: "Aspirador", highlight: "WAP WL 4000", sub: "1900W", href: "/wap-wl-4000/", img: "/wap-wl-4000/images/wap-wl-4000.png" },
+      { name: "Lavadora", highlight: "WAP WL 4000", sub: "2000W", href: "/wap-wl-4000/", img: "/wap-wl-4000/images/wap-wl-4000.png" },
       { name: "Lavadora", highlight: "WAP GTW Inox 15", sub: "1700W", href: "/wap-gtw-inox-15/", img: "/wap-gtw-inox-15/images/gtw-inox-1.webp" },
       { name: "Aspirador", highlight: "WAP High Speed Plus", sub: "2000W", href: "/wap-high-speed-plus/", img: "/wap-high-speed-plus/images/high-speed-1.webp" },
     ],
