@@ -17,6 +17,21 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     {
+      name: 'fix-noscript-in-head',
+      transformIndexHtml(html: string) {
+        // Comenta <noscript> com <img> dentro do <head> para evitar erro parse5
+        return html.replace(
+          /<noscript[\s>][\s\S]*?<\/noscript>/gi,
+          (match) => {
+            if (match.includes('<img')) {
+              return `<!-- NOSCRIPT REMOVIDO PELO VITE -->\n<!-- ${match.replace(/--/g, '- -')} -->`;
+            }
+            return match;
+          }
+        );
+      },
+    },
+    {
       name: 'mpa-trailing-slash',
       configureServer(server: ViteDevServer) {
         server.middlewares.use((req: IncomingMessage, res: ServerResponse, next: () => void) => {
