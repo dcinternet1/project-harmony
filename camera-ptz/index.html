@@ -274,24 +274,21 @@
         </div>
         <div class="gallery-slider" id="gallerySlider">
           <div class="gallery-track" id="galleryTrack">
-            <div class="gallery-slide"><img src="images/camera-ptz-1.png" alt="Câmera PTZ 1" /></div>
-            <div class="gallery-slide"><img src="images/camera-ptz-2.png" alt="Câmera PTZ 2" /></div>
-            <div class="gallery-slide"><img src="images/camera-ptz-3.png" alt="Câmera PTZ 3" /></div>
-            <div class="gallery-slide"><img src="images/camera-ptz-4.png" alt="Câmera PTZ 4" /></div>
+            <div class="gallery-slide"><img src="images/camera-ptz-2.png" alt="Câmera PTZ com App" /></div>
+            <div class="gallery-slide"><img src="images/camera-ptz-3.png" alt="Câmera PTZ IP66" /></div>
+            <div class="gallery-slide"><img src="images/camera-ptz-4.png" alt="Câmera PTZ Dimensões" /></div>
           </div>
-          <span class="gallery-counter" id="galleryCounter">1/4</span>
+          <span class="gallery-counter" id="galleryCounter">1/3</span>
         </div>
         <div class="gallery-dots" id="galleryDots">
           <span class="gallery-dot active" onclick="goToSlide(0)"></span>
           <span class="gallery-dot" onclick="goToSlide(1)"></span>
           <span class="gallery-dot" onclick="goToSlide(2)"></span>
-          <span class="gallery-dot" onclick="goToSlide(3)"></span>
         </div>
         <div class="gallery-thumbs">
-          <div class="gallery-thumb active" onclick="goToSlide(0)"><img src="images/camera-ptz-1.png" alt="Thumb 1" /></div>
-          <div class="gallery-thumb" onclick="goToSlide(1)"><img src="images/camera-ptz-2.png" alt="Thumb 2" /></div>
-          <div class="gallery-thumb" onclick="goToSlide(2)"><img src="images/camera-ptz-3.png" alt="Thumb 3" /></div>
-          <div class="gallery-thumb" onclick="goToSlide(3)"><img src="images/camera-ptz-4.png" alt="Thumb 4" /></div>
+          <div class="gallery-thumb active" onclick="goToSlide(0)"><img src="images/camera-ptz-2.png" alt="Thumb 1" /></div>
+          <div class="gallery-thumb" onclick="goToSlide(1)"><img src="images/camera-ptz-3.png" alt="Thumb 2" /></div>
+          <div class="gallery-thumb" onclick="goToSlide(2)"><img src="images/camera-ptz-4.png" alt="Thumb 3" /></div>
         </div>
       </div>
 
@@ -450,6 +447,9 @@
         <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
         <div class="review-date-ago">a 18 horas atrás</div>
         <div class="review-content">Impressionante a qualidade da imagem dessa câmera 4k! O rastreamento funciona perfeitamente. Comprei o kit e coloquei uma na frente e outra nos fundos.</div>
+        <div class="review-images">
+          <img src="images/avali1.png" alt="Foto avaliação" />
+        </div>
         <button class="review-btn-useful"><i class="fa-regular fa-thumbs-up"></i> É útil <span>6</span></button>
       </div>
 
@@ -458,6 +458,9 @@
         <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
         <div class="review-date-ago">a 1 dia atrás</div>
         <div class="review-content">Melhor custo benefício. O app V380PRO é muito fácil de usar. Chegou super rápido!</div>
+        <div class="review-images">
+          <img src="images/avali6.png" alt="Foto avaliação" />
+        </div>
         <button class="review-btn-useful"><i class="fa-regular fa-thumbs-up"></i> É útil <span>15</span></button>
       </div>
 
@@ -466,6 +469,10 @@
         <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
         <div class="review-date-ago">a 2 dias atrás</div>
         <div class="review-content">A visão noturna é excelente, dá pra ver tudo mesmo no breu total. Recomendo demais a loja Planeta Azul.</div>
+        <div class="review-images">
+          <img src="images/avali7.png" alt="Foto avaliação" />
+          <img src="images/avali2.png" alt="Foto avaliação" />
+        </div>
         <button class="review-btn-useful"><i class="fa-regular fa-thumbs-up"></i> É útil <span>13</span></button>
       </div>
 
@@ -482,6 +489,9 @@
         <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
         <div class="review-date-ago">a 3 dias atrás</div>
         <div class="review-content">Instalação super simples, eu mesmo fiz. A imagem é cristalina.</div>
+        <div class="review-images">
+          <img src="images/avali4.png" alt="Foto avaliação" />
+        </div>
         <button class="review-btn-useful"><i class="fa-regular fa-thumbs-up"></i> É útil <span>15</span></button>
       </div>
     </div>
@@ -537,7 +547,7 @@
 
       // Gallery swipe
       let currentSlide = 0;
-      const totalSlides = 4;
+      const totalSlides = 3;
       const track = document.getElementById('galleryTrack');
       const dots = document.querySelectorAll('.gallery-dot');
       const thumbs = document.querySelectorAll('.gallery-thumb');
