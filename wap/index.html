@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Produtos WAP - Mercado Livre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = [];
+        t = b.createElement(e); t.async = !0; t.src = v;
+        s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "3552534014959752");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3552534014959752&ev=PageView&noscript=1" /></noscript>
+    <script>
+      window.pixelId = "698e81ca6650936c1da59844";
+      var a = document.createElement("script");
+      a.setAttribute("async", ""); a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+
+    <style>
+      :root {
+        --ml-yellow: #ffe600;
+        --ml-blue: #3483fa;
+        --ml-blue-dark: #2968c8;
+        --ml-bg-gray: #ebebeb;
+        --ml-text-dark: #333;
+        --ml-green: #00a650;
+        --ml-orange: #ff7733;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Roboto", sans-serif; -webkit-tap-highlight-color: transparent; }
+      body { background-color: var(--ml-bg-gray); min-height: 100vh; }
+
+      /* Header */
+      .ml-header { background-color: var(--ml-yellow); position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 1px rgba(0,0,0,0.1); }
+      .header-top { display: flex; align-items: center; padding: 8px 16px; gap: 12px; }
+      .header-logo img { height: 34px; }
+      .header-search { flex: 1; position: relative; }
+      .header-search input { width: 100%; padding: 10px 40px 10px 14px; border: none; border-radius: 20px; font-size: 15px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.12); outline: none; }
+      .header-search i { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); color: #999; font-size: 16px; }
+      .header-icons { display: flex; gap: 16px; }
+      .header-icons i { font-size: 22px; color: #333; }
+      .cart-icon { position: relative; }
+      .cart-badge { position: absolute; top: -6px; right: -8px; background: #e53935; color: #fff; font-size: 10px; font-weight: 700; border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; }
+
+      /* Banner */
+      .promo-banner { margin: 0; overflow: hidden; }
+      .promo-banner img { width: 100%; display: block; }
+
+      /* Breadcrumb */
+      .breadcrumb { padding: 12px 16px 0; font-size: 13px; color: var(--ml-blue); }
+      .breadcrumb a { color: var(--ml-blue); text-decoration: none; }
+      .breadcrumb i { font-size: 11px; margin-right: 4px; }
+
+      /* Title Section */
+      .listing-title { padding: 16px 16px 4px; }
+      .listing-title h1 { font-size: 22px; font-weight: 600; color: var(--ml-text-dark); }
+      .listing-title .product-count { font-size: 14px; color: #999; margin-top: 2px; }
+
+      /* Toolbar */
+      .listing-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px 8px; border-bottom: 1px solid #ddd; }
+      .toolbar-left { display: flex; align-items: center; gap: 6px; font-size: 14px; color: var(--ml-text-dark); }
+      .toolbar-left i { font-size: 15px; }
+      .toolbar-right { display: flex; align-items: center; gap: 14px; }
+      .toolbar-right select { border: none; font-size: 14px; color: #666; background: transparent; outline: none; cursor: pointer; }
+      .view-icons { display: flex; gap: 8px; }
+      .view-icons i { font-size: 18px; color: #999; cursor: pointer; }
+      .view-icons i.active { color: var(--ml-blue); }
+
+      /* Product Grid */
+      .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; padding: 0 16px 16px; margin-top: 12px; }
+
+      .product-card { background: #fff; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.08); text-decoration: none; color: inherit; transition: box-shadow 0.2s; }
+      .product-card:active { box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+
+      .product-card-image { position: relative; width: 100%; aspect-ratio: 1; background: #fff; display: flex; align-items: center; justify-content: center; padding: 12px; }
+      .product-card-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+      .product-badge { position: absolute; top: 8px; left: 8px; background: var(--ml-orange); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px; }
+      .product-badge.green { background: var(--ml-green); }
+
+      .product-card-info { padding: 10px 12px 14px; flex: 1; display: flex; flex-direction: column; }
+      .product-card-title { font-size: 13px; color: #666; line-height: 1.3; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+      .product-card-price { font-size: 22px; font-weight: 400; color: var(--ml-text-dark); margin-bottom: 2px; }
+      .product-card-price .cents { font-size: 13px; vertical-align: super; }
+      .product-card-installments { font-size: 12px; color: var(--ml-green); margin-bottom: 6px; display: flex; align-items: center; gap: 4px; }
+      .product-card-installments i { font-size: 11px; }
+      .product-card-shipping { font-size: 12px; color: var(--ml-green); font-weight: 500; }
+      .product-card-old-price { font-size: 12px; color: #999; text-decoration: line-through; margin-bottom: 2px; }
+      .product-card-discount { font-size: 12px; color: var(--ml-green); font-weight: 500; }
+      .product-card-stars { display: flex; align-items: center; gap: 4px; margin-top: 6px; }
+      .product-card-stars i { font-size: 11px; color: var(--ml-blue); }
+      .product-card-stars span { font-size: 12px; color: #999; }
+
+      /* WAP banner */
+      .wap-banner { margin: 16px; border-radius: 8px; overflow: hidden; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 20px; text-align: center; color: #fff; }
+      .wap-banner h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+      .wap-banner p { font-size: 13px; opacity: 0.8; }
+      .wap-banner .highlight { color: var(--ml-yellow); font-weight: 700; }
+      .wap-badge-strip { display: flex; gap: 12px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+      .wap-badge-item { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 6px 12px; font-size: 12px; }
+      .wap-badge-item i { color: var(--ml-yellow); }
+    </style>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <header class="ml-header">
+      <div class="header-top">
+        <a href="/" class="header-logo">
+          <img src="../wap-wl-4000/images/logo.png" alt="Mercado Livre" />
+        </a>
+        <div class="header-search">
+          <input type="text" placeholder="Buscar produtos, muito mais..." readonly />
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="header-icons">
+          <i class="far fa-user"></i>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge">3</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="/"><i class="fas fa-chevron-left"></i> Ver todos os produtos</a>
+    </div>
+
+    <!-- WAP Banner -->
+    <div class="wap-banner">
+      <h2>🔥 Produtos <span class="highlight">WAP</span> em Promoção</h2>
+      <p>Lavadoras e Aspiradores com os melhores preços</p>
+      <div class="wap-badge-strip">
+        <div class="wap-badge-item"><i class="fas fa-truck"></i> Frete Grátis</div>
+        <div class="wap-badge-item"><i class="fas fa-shield-alt"></i> Garantia</div>
+        <div class="wap-badge-item"><i class="fas fa-credit-card"></i> 12x s/ juros</div>
+      </div>
+    </div>
+
+    <!-- Title -->
+    <div class="listing-title">
+      <h1>Produtos WAP</h1>
+      <p class="product-count">3 produtos</p>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="listing-toolbar">
+      <div class="toolbar-left">
+        <i class="fas fa-sliders-h"></i>
+        <span>Filtrar</span>
+      </div>
+      <div class="toolbar-right">
+        <select>
+          <option>Ordenar por</option>
+          <option>Menor preço</option>
+          <option>Maior preço</option>
+        </select>
+        <div class="view-icons">
+          <i class="fas fa-th active"></i>
+          <i class="fas fa-list"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+
+      <!-- WAP Líder 2200 -->
+      <a href="../wap-lider-2200/" class="product-card">
+        <div class="product-card-image">
+          <span class="product-badge green">MAIS VENDIDO</span>
+          <img src="../wap-lider-2200/images/wap-lider-2200.png" alt="WAP Líder 2200" />
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-title">Lavadora de Alta Pressão WAP Líder 2200 1750 PSI</p>
+          <p class="product-card-price">R$ 109<span class="cents">,90</span></p>
+          <p class="product-card-installments"><i class="far fa-credit-card"></i> 12x R$ 9,16 sem juros</p>
+          <p class="product-card-shipping">Frete grátis</p>
+          <div class="product-card-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            <span>(2.847)</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- WAP GTW Inox 15 -->
+      <a href="../wap-gtw-inox-15/" class="product-card">
+        <div class="product-card-image">
+          <span class="product-badge">27% OFF</span>
+          <img src="../wap-gtw-inox-15/images/gtw-inox-1.webp" alt="WAP GTW Inox 15" />
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-title">Aspirador de Água e Pó WAP GTW Inox 15 1700W</p>
+          <p class="product-card-old-price">R$ 577</p>
+          <p class="product-card-price">R$ 419</p>
+          <p class="product-card-installments"><i class="far fa-credit-card"></i> 8x R$ 52,38 sem juros</p>
+          <p class="product-card-shipping">Frete grátis</p>
+          <div class="product-card-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            <span>(1.523)</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- WAP WL 4000 -->
+      <a href="../wap-wl-4000/" class="product-card">
+        <div class="product-card-image">
+          <span class="product-badge">56% OFF</span>
+          <img src="../wap-wl-4000/images/wap-wl-4000-1.webp" alt="WAP WL 4000" />
+        </div>
+        <div class="product-card-info">
+          <p class="product-card-title">Lavadora de Alta Pressão WAP WL 4000 2200 PSI</p>
+          <p class="product-card-old-price">R$ 2.000</p>
+          <p class="product-card-price">R$ 879<span class="cents">,90</span></p>
+          <p class="product-card-installments"><i class="far fa-credit-card"></i> 12x R$ 85,09</p>
+          <p class="product-card-shipping">Frete grátis</p>
+          <div class="product-card-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <span>(987)</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+  </body>
+</html>
