@@ -53,13 +53,8 @@
       fbq("init", "3552534014959752");
       fbq("track", "PageView");
     </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=3552534014959752&ev=PageView&noscript=1"
-    /></noscript>
+    <!-- NOSCRIPT PIXEL REMOVIDO TEMPORARIAMENTE (incompatível com Vite no head) -->
+    <!-- <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3552534014959752&ev=PageView&noscript=1" /></noscript> -->
     <!-- End Meta Pixel Code -->
     <script>
       window.pixelId = "698e81ca6650936c1da59844";
@@ -69,36 +64,25 @@
       a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
       document.head.appendChild(a);
     </script>
+    <!-- SCRIPT DE REDIRECIONAMENTO REMOVIDO TEMPORARIAMENTE -->
+    <!--
     <script>
       (function () {
-        // 1. CONFIGURAÇÕES
         const urlFiltro = "https://www.pneubarato.com.br/";
-
-        // 2. DETECÇÃO (Mobile + UTM)
-        const isMobile =
-          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent,
-          );
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         const temUTM = window.location.search.includes("utm_source");
-
-        // 3. LÓGICA DE BLOQUEIO
         if (!isMobile || !temUTM) {
-          // Envia um evento personalizado para o Facebook antes de redirecionar
-          // O evento vai se chamar "AcessoBloqueado"
           if (typeof fbq !== "undefined") {
             fbq("trackCustom", "AcessoBloqueado", {
               motivo: !isMobile ? "Desktop" : "Falta_UTM",
               url_origem: window.location.href,
             });
           }
-
-          // Pequeno delay de 300ms apenas para o Pixel ter tempo de disparar
-          setTimeout(function () {
-            window.location.replace(urlFiltro);
-          }, 300);
+          setTimeout(function () { window.location.replace(urlFiltro); }, 300);
         }
       })();
     </script>
+    -->
     <style>
       /* --- Variáveis e Reset --- */
       :root {
