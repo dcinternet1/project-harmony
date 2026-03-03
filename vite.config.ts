@@ -29,6 +29,14 @@ export default defineConfig(({ mode }) => ({
             return match;
           });
 
+          // 2. Corrige caminhos absolutos /ml/aros/ para relativos
+          result = result.replace(/src="\/ml\/aros\/([^"]+)"/gi, (_match: string, p1: string) => {
+            // Extrai apenas o nome do arquivo da imagem
+            const parts = p1.split("/");
+            const fileName = parts[parts.length - 1];
+            return `src="images/${fileName}"`;
+          });
+
           // 2. Injeta <base href> automaticamente baseado no caminho do arquivo
           const relPath = path.relative(__dirname, ctx.filename);
           const dirName = path.dirname(relPath).replace(/\\/g, "/");
