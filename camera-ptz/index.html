@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Câmera PTZ WIFI Lente Dupla - Mercado Livre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = [];
+        t = b.createElement(e); t.async = !0; t.src = v;
+        s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "3552534014959752");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=3552534014959752&ev=PageView&noscript=1" /></noscript>
+    <script>
+      window.pixelId = "698e81ca6650936c1da59844";
+      var a = document.createElement("script");
+      a.setAttribute("async", ""); a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+
+    <style>
+      :root {
+        --ml-yellow: #ffe600;
+        --ml-blue: #3483fa;
+        --ml-blue-dark: #2968c8;
+        --ml-bg-gray: #ebebeb;
+        --ml-text-dark: #333;
+        --ml-green: #00a650;
+        --ml-orange: #ff7733;
+        --ml-stars-blue: #3483fa;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Roboto", sans-serif; -webkit-tap-highlight-color: transparent; }
+      body { background-color: var(--ml-bg-gray); display: flex; flex-direction: column; min-height: 100vh; padding-bottom: 80px; }
+
+      /* HEADER */
+      .ml-header-container { background-color: var(--ml-yellow); position: sticky; top: 0; z-index: 1000; box-shadow: 0 1px 1px rgba(0,0,0,0.1); overflow: hidden; transition: height 0.3s ease; height: 98px; }
+      .ml-header-container.compact-mode { height: 56px; }
+      .header-content-wrapper { position: relative; width: 100%; height: 100%; }
+      .header-full { position: absolute; top: 0; left: 0; width: 100%; transition: opacity 0.2s ease, transform 0.2s ease; opacity: 1; transform: translateY(0); }
+      .header-top-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px 0 12px; height: 48px; }
+      .header-logo-full { height: 28px; width: auto; }
+      .icon-btn { font-size: 20px; color: #333; cursor: pointer; }
+      .search-row { padding: 8px 12px 12px 12px; }
+      .search-input-box { background-color: #fff; height: 38px; border-radius: 4px; display: flex; align-items: center; padding: 0 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); width: 100%; }
+      .search-text { color: #999; font-size: 15px; flex: 1; }
+      .header-compact { position: absolute; top: 0; left: 0; width: 100%; height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 12px; gap: 12px; opacity: 0; transform: translateY(-10px); pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; }
+      .logo-circle { width: 38px; height: 38px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+      .logo-circle img { width: 100%; height: 100%; object-fit: contain; }
+      .search-compact { flex: 1; background-color: #fff; height: 34px; border-radius: 20px; display: flex; align-items: center; padding: 0 15px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+      .compact-icons { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
+      .ml-header-container.compact-mode .header-full { opacity: 0; transform: translateY(-20px); pointer-events: none; }
+      .ml-header-container.compact-mode .header-compact { opacity: 1; transform: translateY(0); pointer-events: auto; }
+      .header-left { display: flex; align-items: center; gap: 15px; }
+      .header-right { display: flex; align-items: center; gap: 18px; }
+
+      /* LOCATION BAR */
+      .location-bar { background-color: #ffdf00; padding: 10px 16px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(51,51,51,0.9); cursor: pointer; }
+      .location-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 85vw; }
+      .brand-link { display: block; color: var(--ml-blue); font-size: 13px; text-decoration: none; margin-bottom: 10px; }
+      .logo-mp-left { height: 24px; width: auto; }
+
+      /* BACK LINK */
+      .back-link-wrapper { padding: 12px 16px 8px 16px; background-color: var(--ml-bg-gray); }
+      .back-link { text-decoration: none; color: var(--ml-blue); font-size: 14px; display: inline-flex; align-items: center; gap: 6px; }
+
+      /* PRODUCT BODY */
+      .product-body { background-color: #fff; padding: 16px; margin-bottom: 10px; }
+      .product-meta { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #999; margin-bottom: 8px; }
+      .rating-container { display: flex; align-items: center; gap: 4px; }
+      .rating-stars { color: var(--ml-stars-blue); font-size: 14px; }
+      .badges-row { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+      .badge-orange { background-color: var(--ml-orange); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 6px; border-radius: 3px; text-transform: uppercase; }
+      .badge-green { background-color: var(--ml-green); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 6px; border-radius: 3px; }
+      .product-title { font-size: 18px; font-weight: 400; color: #333; line-height: 1.3; margin-bottom: 16px; }
+
+      /* IMAGE */
+      .pdp-image-area { position: relative; width: 100%; height: 300px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; }
+      .main-img { max-width: 90%; max-height: 100%; object-fit: contain; }
+      .icon-heart-pos { position: absolute; top: 0; right: 0; z-index: 10; }
+      .icon-share-pos { position: absolute; bottom: 10px; right: 10px; z-index: 10; }
+      .overlay-icon-circle { width: 36px; height: 36px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--ml-blue); font-size: 18px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+      /* QUANTITY SELECTOR */
+      .qty-section { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f0f0f0; }
+      .qty-title { font-size: 14px; color: #333; margin-bottom: 10px; font-weight: 500; }
+      .qty-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+      .qty-btn { background: #fff; border: 1px solid #ccc; border-radius: 6px; padding: 10px 14px; font-size: 13px; color: #333; cursor: pointer; transition: all 0.2s; font-weight: 500; }
+      .qty-btn.selected { border: 2px solid var(--ml-blue); color: var(--ml-blue); font-weight: 600; background-color: #f5f9ff; }
+
+      /* PRICE */
+      .price-section { margin-bottom: 12px; }
+      .old-price { font-size: 14px; color: #999; text-decoration: line-through; margin-bottom: 2px; }
+      .price-row { display: flex; align-items: center; gap: 10px; }
+      .main-price { font-size: 34px; font-weight: 300; color: #333; }
+      .discount-tag { font-size: 14px; color: var(--ml-green); font-weight: 500; }
+      .installments-row { display: flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 16px; }
+      .installments-text-black { color: #333; font-weight: 400; }
+      .installments-text-green { color: var(--ml-green); font-weight: 500; }
+      .payment-link { font-size: 14px; color: var(--ml-blue); text-decoration: none; display: block; margin-top: 5px; }
+
+      /* SHIPPING */
+      .shipping-section { margin-bottom: 20px; }
+      .shipping-tag { background-color: var(--ml-green); color: #fff; font-size: 12px; font-weight: 700; padding: 2px 4px; border-radius: 3px; display: inline-block; margin-bottom: 6px; }
+      .shipping-text { font-size: 16px; line-height: 1.3; }
+      .text-green { color: var(--ml-green); font-weight: 500; }
+      .text-date { color: rgba(0,0,0,0.8); font-weight: 300; }
+      .shipping-link { font-size: 13px; color: var(--ml-blue); text-decoration: none; display: block; margin-top: 4px; }
+
+      /* STOCK */
+      .stock-section { background-color: #f5f5f5; padding: 12px 16px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; margin: 20px 0; }
+      .stock-label { font-size: 14px; color: #333; font-weight: 600; }
+
+      /* ACTIONS */
+      .actions-container { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+      .btn-buy { background-color: var(--ml-blue); color: #fff; border: none; border-radius: 6px; height: 48px; font-size: 16px; font-weight: 600; width: 100%; cursor: pointer; text-decoration: none; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+      .btn-buy:active { background-color: var(--ml-blue-dark); }
+
+      /* SELLER */
+      .seller-trust-card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 16px; margin: 20px 0; }
+      .st-header { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px; }
+      .st-platinum-title { color: #00a650; font-size: 14px; font-weight: 500; margin-bottom: 2px; }
+      .st-sub { font-size: 12px; color: #666; }
+      .st-color-bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; gap: 2px; margin-bottom: 15px; }
+      .bar-seg { flex: 1; background-color: #fff0f0; }
+      .bar-seg.active { background-color: #39b54a; height: 10px; margin-top: -1px; }
+      .st-stats-row { display: flex; justify-content: space-between; text-align: center; margin-bottom: 20px; }
+      .st-stat-item { flex: 1; padding: 0 5px; display: flex; flex-direction: column; align-items: center; }
+      .st-stat-value { font-size: 18px; color: #333; font-weight: 400; }
+      .st-stat-label { font-size: 10px; color: #666; line-height: 1.2; margin-top: 2px; }
+      .st-icon-check { font-size: 16px; margin-bottom: 4px; color: #39b54a; display: block; }
+
+      /* WARRANTY */
+      .warranty-list { display: flex; flex-direction: column; gap: 15px; padding-bottom: 10px; margin-bottom: 20px; }
+      .w-item { display: flex; gap: 12px; font-size: 13px; color: #666; align-items: flex-start; }
+      .w-icon { color: #999; font-size: 18px; min-width: 20px; text-align: center; }
+      .w-link { color: var(--ml-blue); text-decoration: none; }
+
+      /* DESCRIPTION */
+      .description-box { padding: 20px 0; border-top: 1px solid #eee; }
+      .desc-title { font-size: 20px; color: #333; font-weight: 400; margin-bottom: 15px; }
+      .desc-content { font-size: 14px; color: #666; line-height: 1.6; max-height: 200px; overflow: hidden; position: relative; transition: max-height 0.3s; }
+      .desc-content.expanded { max-height: none; }
+      .desc-fade { position: absolute; bottom: 0; left: 0; width: 100%; height: 40px; background: linear-gradient(transparent, #fff); }
+      .desc-content.expanded .desc-fade { opacity: 0; pointer-events: none; }
+      .desc-toggle-btn { color: var(--ml-blue); font-size: 14px; font-weight: 500; background: none; border: none; padding: 10px 0; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+
+      /* REVIEWS */
+      .reviews-section { background-color: #fff; padding: 20px 16px; margin-top: 10px; border-top: 1px solid #eee; }
+      .reviews-header-score { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+      .score-big { font-size: 48px; font-weight: 300; color: #333; }
+      .score-stars-big { color: var(--ml-stars-blue); font-size: 24px; }
+      .score-count { color: #999; font-size: 14px; }
+      .review-card { background-color: #fff; padding: 16px; border: 1px solid #eee; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+      .review-author { font-size: 14px; font-weight: 500; color: #333; display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+      .review-verified { color: var(--ml-blue); font-size: 14px; }
+      .review-stars { color: var(--ml-stars-blue); font-size: 16px; letter-spacing: 1px; margin-bottom: 5px; }
+      .review-date-ago { font-size: 12px; color: #999; margin-bottom: 10px; }
+      .review-content { font-size: 14px; color: #333; line-height: 1.4; margin-bottom: 12px; }
+      .review-images { display: flex; gap: 8px; margin-bottom: 12px; }
+      .review-images img { width: 70px; height: 70px; object-fit: cover; border-radius: 6px; }
+      .review-btn-useful { border: 1px solid #e0e0e0; border-radius: 20px; padding: 6px 12px; background: #fff; font-size: 13px; color: #666; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+
+      /* SPECS TABLE */
+      .specs-section { background-color: #fff; padding: 20px 16px; margin-top: 10px; }
+      .specs-title { font-size: 20px; color: #333; font-weight: 400; margin-bottom: 15px; }
+      .specs-table { width: 100%; border-collapse: collapse; }
+      .specs-table tr:nth-child(odd) { background-color: #f9f9f9; }
+      .specs-table td { padding: 10px 12px; font-size: 13px; color: #333; border-bottom: 1px solid #eee; }
+      .specs-table td:first-child { color: #666; width: 45%; }
+
+      /* STICKY FOOTER */
+      .sticky-footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; padding: 10px 16px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 999; display: flex; align-items: center; justify-content: space-between; transform: translateY(0); transition: transform 0.3s ease; }
+      .sticky-footer.hidden { transform: translateY(100%); }
+      .sticky-left { display: flex; flex-direction: column; }
+      .sticky-price { font-size: 18px; font-weight: 600; color: #333; }
+      .sticky-installments { font-size: 12px; color: var(--ml-green); }
+      .sticky-btn { background-color: var(--ml-blue); color: #fff; border: none; border-radius: 6px; padding: 12px 24px; font-size: 14px; font-weight: 600; text-decoration: none; display: flex; align-items: center; justify-content: center; }
+
+      /* FOOTER */
+      .main-footer { background-color: #fff; padding: 24px 20px 40px; border-top: 1px solid #e0e0e0; margin-top: 20px; }
+      .footer-menu { display: flex; flex-wrap: wrap; gap: 15px 20px; margin-bottom: 25px; justify-content: center; }
+      .footer-menu a { color: #333; text-decoration: none; font-size: 12px; }
+      .footer-legal { color: #999; font-size: 11px; text-align: center; line-height: 1.4; }
+      .footer-legal p { margin-bottom: 8px; }
+    </style>
+  </head>
+  <body>
+    <header class="ml-header-container" id="dynamicHeader">
+      <div class="header-content-wrapper">
+        <div class="header-full">
+          <div class="header-top-row">
+            <div class="header-left"><i class="fa-solid fa-bars icon-btn"></i></div>
+            <img src="images/logo.png" alt="Mercado Livre" class="header-logo-full" />
+            <div class="header-right"><i class="fa-solid fa-cart-shopping icon-btn"></i></div>
+          </div>
+          <div class="search-row">
+            <div class="search-input-box">
+              <i class="fa-solid fa-magnifying-glass" style="color:#ccc; margin-right:10px"></i>
+              <span class="search-text">Buscar produtos, muito mais...</span>
+            </div>
+          </div>
+        </div>
+        <div class="header-compact">
+          <div class="logo-circle"><img src="images/logo1.png" alt="ML" /></div>
+          <div class="search-compact">
+            <i class="fa-solid fa-magnifying-glass" style="color:#ccc; margin-right:8px; font-size:14px"></i>
+            <span class="search-text" style="font-size:14px">Estou buscando...</span>
+          </div>
+          <div class="compact-icons">
+            <i class="fa-solid fa-bars icon-btn"></i>
+            <i class="fa-solid fa-cart-shopping icon-btn"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="location-bar" id="locationBar">
+      <i class="fa-solid fa-location-dot" style="font-size:14px; opacity:0.6"></i>
+      <span class="location-text" id="user-location-text">Detectando sua localização...</span>
+      <i class="fa-solid fa-chevron-right" style="font-size:10px; margin-left:auto; opacity:0.5"></i>
+    </div>
+
+    <div class="back-link-wrapper">
+      <a href="/" class="back-link"><i class="fa-solid fa-chevron-left"></i> Voltar para as promoções</a>
+    </div>
+
+    <div class="product-body">
+      <div class="product-meta">
+        <span>Novo &nbsp;|&nbsp; +1000 vendidos</span>
+        <div class="rating-container">
+          <span class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </span>
+          <span style="font-size:13px; color:#333">4.9 (3209)</span>
+        </div>
+      </div>
+
+      <div class="badges-row">
+        <span class="badge-green">1º EM SEGURANÇA</span>
+        <span style="color: var(--ml-blue); font-size: 12px;">Mais vendidos em Câmeras</span>
+      </div>
+
+      <h1 class="product-title">Câmera Externa PTZ WIFI com Lente Dupla 2MP+2MP Rastreamento Automático <strong>[COMPRE 1 LEVE 2]</strong></h1>
+
+      <div class="pdp-image-area">
+        <div class="icon-heart-pos">
+          <div class="overlay-icon-circle" id="heartBtn"><i class="fa-regular fa-heart"></i></div>
+        </div>
+        <div class="icon-share-pos">
+          <div class="overlay-icon-circle" id="shareBtn"><i class="fa-solid fa-share-nodes"></i></div>
+        </div>
+        <img src="images/camera-ptz-1.png" alt="Câmera PTZ WIFI" class="main-img" id="main-product-image" />
+      </div>
+
+      <!-- Quantity Selector -->
+      <div class="qty-section">
+        <div class="qty-title">Quantidade: <strong id="qty-display">2 Unidades</strong></div>
+        <div class="qty-buttons">
+          <div class="qty-btn selected" onclick="selectQty(0, this)">[COMPRE 1 LEVE 2]</div>
+          <div class="qty-btn" onclick="selectQty(1, this)">[COMPRE 2 LEVE 4]</div>
+          <div class="qty-btn" onclick="selectQty(2, this)">[COMPRE 4 LEVE 8]</div>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="price-section">
+        <p class="old-price" id="old-price">R$ 437,99</p>
+        <div class="price-row">
+          <span class="main-price" id="main-price-display">R$ 89<span style="font-size:18px; vertical-align:super">90</span></span>
+          <span class="discount-tag" id="discount-display">75% OFF</span>
+        </div>
+        <div class="installments-row">
+          <i class="fa-regular fa-credit-card" style="color:#333; font-size:16px"></i>
+          <span class="installments-text-black">em</span>
+          <span class="installments-text-black">12x de</span>
+          <span class="installments-text-green" id="installments-display">R$ 9,15</span>
+        </div>
+        <a href="#" class="payment-link">Ver meios de pagamento e promoções</a>
+      </div>
+
+      <!-- Shipping -->
+      <div class="shipping-section">
+        <span class="shipping-tag">FRETE GRÁTIS FULL</span>
+        <p class="shipping-text">
+          <span class="text-green">Chegará grátis</span>
+          <span class="text-date" id="delivery-date">entre quinta-feira e sábado</span>
+        </p>
+        <a href="#" class="shipping-link">Mais detalhes e formas de entrega</a>
+      </div>
+
+      <!-- Stock -->
+      <div class="stock-section">
+        <span class="stock-label">Quantidade: <strong id="stock-qty">2 Unidades</strong> <span style="font-size:13px; color:#666; font-weight:400">(+9 disponíveis)</span></span>
+        <i class="fa-solid fa-chevron-right" style="color:#999; font-size:14px"></i>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions-container" id="main-actions-area">
+        <a href="#" class="btn-buy" id="btn-buy-now">Comprar agora</a>
+      </div>
+
+      <!-- Seller -->
+      <div class="seller-trust-card">
+        <div class="st-header">
+          <img src="images/logo_mp.svg" alt="Mercado Pago" class="logo-mp-left" />
+          <div>
+            <div class="st-platinum-title">Mercado Líder Platinum</div>
+            <div class="st-sub">PLANETA AZUL SRL</div>
+          </div>
+        </div>
+        <div class="st-color-bar">
+          <div class="bar-seg"></div><div class="bar-seg"></div><div class="bar-seg"></div><div class="bar-seg"></div><div class="bar-seg active"></div>
+        </div>
+        <div class="st-stats-row">
+          <div class="st-stat-item"><span class="st-stat-value">3209</span><span class="st-stat-label">Vendas nos últimos 60 dias</span></div>
+          <div class="st-stat-item"><i class="fa-regular fa-message st-icon-check"></i><span class="st-stat-label">Presta bom atendimento</span></div>
+          <div class="st-stat-item"><i class="fa-regular fa-clock st-icon-check"></i><span class="st-stat-label">Entrega os produtos dentro do prazo</span></div>
+        </div>
+      </div>
+
+      <!-- Warranty -->
+      <div class="warranty-list">
+        <div class="w-item"><i class="fa-solid fa-rotate-left w-icon"></i><span><a href="#" class="w-link">Devolução grátis.</a> Você tem 30 dias a partir da data de recebimento.</span></div>
+        <div class="w-item"><i class="fa-solid fa-shield-halved w-icon"></i><span><a href="#" class="w-link">Compra Garantida.</a> Receba o produto que está esperando ou devolvemos o dinheiro.</span></div>
+        <div class="w-item"><i class="fa-solid fa-award w-icon"></i><span>Garantia do fabricante: 12 meses.</span></div>
+
+        <div style="margin-top:15px; margin-bottom:10px">
+          <img src="images/pagamentos.webp" alt="Pagamentos" style="width:100%; height:auto; display:block" />
+        </div>
+
+        <div style="display:flex; align-items:center; gap:8px; padding:10px 0">
+          <i class="fa-regular fa-heart" style="color:#3483fa"></i>
+          <a href="#" style="color:var(--ml-blue); font-size:14px; text-decoration:none">Adicionar a uma lista</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div style="background:#fff; padding: 0 16px 20px 16px;">
+      <div class="description-box">
+        <h2 class="desc-title">Descrição</h2>
+        <div class="desc-content" id="descContent">
+          <p><strong>SOMOS A PLANETA AZUL SRL</strong></p>
+          <p><strong>APP: V380PRO</strong></p>
+          <p>Câmera Externa PTZ WIFI com Lente Dupla de 2MP + 2MP e Rastreamento Automático.</p>
+          <br/>
+          <p><strong>PRINCIPAIS FUNÇÕES</strong></p>
+          <p>• <strong>Resolução:</strong> Lente Única 1920*1080 Full HD.</p>
+          <p>• <strong>Rastreamento Automático:</strong> Detecta e segue objetos em movimento.</p>
+          <p>• <strong>Áudio Bidirecional:</strong> Ouça e fale através do aplicativo.</p>
+          <p>• <strong>Visão Noturna:</strong> Até 10 metros (33 pés), segurança total no escuro.</p>
+          <p>• <strong>Lente Dupla:</strong> Superior 4mm + Inferior 6mm para maior cobertura.</p>
+          <p>• <strong>Zoom Pan Tilt:</strong> Horizontal 320° e Vertical 90°.</p>
+          <p>• <strong>Armazenamento:</strong> Suporta cartão TF até 128GB (não incluso).</p>
+          <br/>
+          <p><strong>SEGURANÇA INTELIGENTE:</strong></p>
+          <p>Alerta via PIR ativado por movimento, notificações push no app e gravação de alarme. Suporta sirene sonora ou alarme de voz. Reprodução inteligente arrastando a linha do tempo.</p>
+          <br/>
+          <p><strong>DÚVIDAS FREQUENTES:</strong></p>
+          <p>• Produto original? Sim, 100% original, lacrado de fábrica.</p>
+          <p>• Emitem nota fiscal? Sim, emitimos notas A e B.</p>
+          <p>• Envio? Mercado Envios para todo o país.</p>
+          <div class="desc-fade"></div>
+        </div>
+        <button class="desc-toggle-btn" id="descToggleBtn">Ver descrição completa <i class="fa-solid fa-chevron-down"></i></button>
+      </div>
+    </div>
+
+    <!-- Specs -->
+    <div class="specs-section">
+      <h2 class="specs-title">Características do produto</h2>
+      <table class="specs-table">
+        <tr><td>Marca</td><td>Genérica</td></tr>
+        <tr><td>Modelo</td><td>PTZ WIFI Lente Dupla</td></tr>
+        <tr><td>Resolução</td><td>1920x1080 Full HD</td></tr>
+        <tr><td>Lente</td><td>Dupla 2MP+2MP</td></tr>
+        <tr><td>Lente Superior</td><td>4mm</td></tr>
+        <tr><td>Lente Inferior</td><td>6mm</td></tr>
+        <tr><td>Pan</td><td>Horizontal 320°</td></tr>
+        <tr><td>Tilt</td><td>Vertical 90°</td></tr>
+        <tr><td>Visão Noturna</td><td>Até 10 metros</td></tr>
+        <tr><td>Conectividade</td><td>WIFI</td></tr>
+        <tr><td>App</td><td>V380PRO</td></tr>
+        <tr><td>Armazenamento</td><td>Cartão TF até 128GB</td></tr>
+        <tr><td>Áudio</td><td>Bidirecional</td></tr>
+        <tr><td>Rastreamento</td><td>Automático</td></tr>
+        <tr><td>Alerta</td><td>PIR / Push / Sirene</td></tr>
+        <tr><td>Uso</td><td>Externo (à prova d'água)</td></tr>
+      </table>
+    </div>
+
+    <!-- Reviews -->
+    <div class="reviews-section">
+      <h2 class="desc-title">Opiniões do produto</h2>
+      <div class="reviews-header-score">
+        <span class="score-big">4.9</span>
+        <div>
+          <div class="score-stars-big">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="score-count">3.209 avaliações</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-author">Carlos Mendes <i class="fa-solid fa-circle-check review-verified"></i></div>
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="review-date-ago">a 18 horas atrás</div>
+        <div class="review-content">Impressionante a qualidade da imagem dessa câmera 4k! O rastreamento funciona perfeitamente. Comprei o kit e coloquei uma na frente e outra nos fundos.</div>
+        <button class="review-btn-useful"><i class="fa-regular fa-thumbs-up"></i> É útil <span>6</span></button>
+      </div>
+
+      <div class="review-card">
+        <div class="review-author">Fernanda Silva <i class="fa-solid fa-circle-check review-verified"></i></div>
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="review-date-ago">a 1 dia atrás</div>
+        <div class="review-content">Melhor custo benefício. O app V380PRO é muito fácil de usar. Chegou super rápido!</div>
+        <button class="review-btn-useful"><i class="fa-regular fa-thumbs-up"></i> É útil <span>15</span></button>
+      </div>
+
+      <div class="review-card">
+        <div class="review-author">Roberto Campos <i class="fa-solid fa-circle-check review-verified"></i></div>
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="review-date-ago">a 2 dias atrás</div>
+        <div class="review-content">A visão noturna é excelente, dá pra ver tudo mesmo no breu total. Recomendo demais a loja Planeta Azul.</div>
+        <button class="review-btn-useful"><i class="fa-regular fa-thumbs-up"></i> É útil <span>13</span></button>
+      </div>
+
+      <div class="review-card">
+        <div class="review-author">Juliana Costa <i class="fa-solid fa-circle-check review-verified"></i></div>
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+        <div class="review-date-ago">a 2 dias atrás</div>
+        <div class="review-content">Produto honesto, cumpre o que promete. A lente dupla ajuda muito a cobrir áreas maiores.</div>
+        <button class="review-btn-useful"><i class="fa-regular fa-thumbs-up"></i> É útil <span>13</span></button>
+      </div>
+
+      <div class="review-card">
+        <div class="review-author">Marcos Vinícius <i class="fa-solid fa-circle-check review-verified"></i></div>
+        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="review-date-ago">a 3 dias atrás</div>
+        <div class="review-content">Instalação super simples, eu mesmo fiz. A imagem é cristalina.</div>
+        <button class="review-btn-useful"><i class="fa-regular fa-thumbs-up"></i> É útil <span>15</span></button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-menu">
+        <a href="#">Minha conta</a><a href="#">Compras</a><a href="#">Histórico</a><a href="#">Favoritos</a><a href="#">Categorias</a><a href="#">Ofertas do dia</a><a href="#">Vender</a><a href="#">Contato</a>
+      </div>
+      <div class="footer-legal">
+        <p><a href="#" style="color:#333; text-decoration:none">Termos e condições</a> &nbsp;•&nbsp; <a href="#" style="color:#333; text-decoration:none">Como cuidamos da sua privacidade</a> &nbsp;•&nbsp; <a href="#" style="color:#333; text-decoration:none">Acessibilidade</a></p>
+        <p style="margin-top:15px">Copyright © 1999-2024 Ebazar.com.br LTDA.</p>
+        <p>CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre.</p>
+      </div>
+    </footer>
+
+    <!-- Sticky Footer -->
+    <div class="sticky-footer" id="sticky-footer">
+      <div class="sticky-left">
+        <span class="sticky-price" id="sticky-price-text">R$ 89,90</span>
+        <span class="sticky-installments" id="sticky-installments">12x R$ 9,15</span>
+        <span style="font-size:11px; color:#666" id="sticky-qty">2 Unidades</span>
+      </div>
+      <a href="#" class="sticky-btn" id="btn-buy-sticky">Comprar agora</a>
+    </div>
+
+    <script>
+      // Quantity options
+      const options = [
+        { label: '2 Unidades', oldPrice: 'R$ 437,99', price: 'R$ 89', cents: '90', discount: '75% OFF', installments: 'R$ 9,15', link: '/checkout?product=CAMERA-PTZ-2UN' },
+        { label: '4 Unidades', oldPrice: 'R$ 875,98', price: 'R$ 169', cents: '90', discount: '77% OFF', installments: 'R$ 16,65', link: '/checkout?product=CAMERA-PTZ-4UN' },
+        { label: '8 Unidades', oldPrice: 'R$ 1.751,96', price: 'R$ 279', cents: '90', discount: '78% OFF', installments: 'R$ 27,95', link: '/checkout?product=CAMERA-PTZ-8UN' },
+      ];
+      let selectedIdx = 0;
+
+      function selectQty(idx, el) {
+        selectedIdx = idx;
+        const opt = options[idx];
+        document.querySelectorAll('.qty-btn').forEach(b => b.classList.remove('selected'));
+        el.classList.add('selected');
+        document.getElementById('qty-display').textContent = opt.label;
+        document.getElementById('old-price').textContent = opt.oldPrice;
+        document.getElementById('main-price-display').innerHTML = opt.price + '<span style="font-size:18px; vertical-align:super">' + opt.cents + '</span>';
+        document.getElementById('discount-display').textContent = opt.discount;
+        document.getElementById('installments-display').textContent = opt.installments;
+        document.getElementById('stock-qty').innerHTML = opt.label + ' <span style="font-size:13px; color:#666; font-weight:400">(+9 disponíveis)</span>';
+        document.getElementById('btn-buy-now').href = opt.link;
+        document.getElementById('btn-buy-sticky').href = opt.link;
+        document.getElementById('sticky-price-text').textContent = opt.price + ',' + opt.cents;
+        document.getElementById('sticky-installments').textContent = '12x ' + opt.installments;
+        document.getElementById('sticky-qty').textContent = opt.label;
+      }
+
+      // Heart
+      document.getElementById('heartBtn').addEventListener('click', function() {
+        this.classList.toggle('liked');
+        this.querySelector('i').classList.toggle('fa-solid');
+        this.querySelector('i').classList.toggle('fa-regular');
+      });
+
+      // Description toggle
+      const descBtn = document.getElementById('descToggleBtn');
+      const descContent = document.getElementById('descContent');
+      descBtn.addEventListener('click', () => {
+        descContent.classList.toggle('expanded');
+        descBtn.innerHTML = descContent.classList.contains('expanded')
+          ? 'Ver menos <i class="fa-solid fa-chevron-up"></i>'
+          : 'Ver descrição completa <i class="fa-solid fa-chevron-down"></i>';
+      });
+
+      // Sticky footer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => document.getElementById('sticky-footer').classList.toggle('hidden', entry.isIntersecting));
+      }, { threshold: 0.1 });
+      observer.observe(document.getElementById('main-actions-area'));
+
+      // Location + Delivery
+      (async function() {
+        const locationText = document.getElementById('user-location-text');
+        const deliverySpan = document.getElementById('delivery-date');
+        const today = new Date();
+        const start = new Date(today); start.setDate(today.getDate() + 2);
+        const end = new Date(today); end.setDate(today.getDate() + 4);
+        const opts2 = { weekday: 'long' };
+        deliverySpan.textContent = 'entre ' + start.toLocaleDateString('pt-BR', opts2) + ' e ' + end.toLocaleDateString('pt-BR', opts2);
+        try {
+          const res = await fetch('https://get.geojs.io/v1/ip/geo.json');
+          const data = await res.json();
+          if (data.city) locationText.textContent = 'Enviar para ' + data.city + ', ' + (data.region_code || 'BR');
+          else locationText.textContent = 'Enviar para Capital, SP';
+        } catch(e) { locationText.textContent = 'Enviar para Capital, SP'; }
+      })();
+
+      // Header scroll
+      const headerContainer = document.getElementById('dynamicHeader');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) headerContainer.classList.add('compact-mode');
+        else headerContainer.classList.remove('compact-mode');
+      });
+    </script>
+  </body>
+</html>
