@@ -21,10 +21,10 @@ export default defineConfig(({ mode }) => ({
       transformIndexHtml: {
         order: "pre" as const,
         handler(html: string, ctx: { filename: string }) {
-          // 1. Comenta <noscript> com <img> dentro do <head> para evitar erro parse5
+          // 1. Remove <noscript> com <img> para evitar erro parse5
           let result = html.replace(/<noscript[\s>][\s\S]*?<\/noscript>/gi, (match) => {
             if (match.includes("<img")) {
-              return `<!-- NOSCRIPT REMOVIDO PELO VITE -->\n<!-- ${match.replace(/--/g, "- -")} -->`;
+              return "";
             }
             return match;
           });
