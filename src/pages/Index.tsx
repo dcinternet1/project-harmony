@@ -1,14 +1,40 @@
-const products = [
-  { name: "Pneu Aro", highlight: "13", sub: "Pirelli", href: "/aro13/", img: "/images/pneu.png" },
-  { name: "Pneu Aro", highlight: "14", sub: "Pirelli", href: "/aro14/", img: "/images/pneu.png" },
-  { name: "Pneu Aro", highlight: "15", sub: "Pirelli", href: "/aro15/", img: "/images/pneu.png" },
-  { name: "Pneu Aro", highlight: "16", sub: "Pirelli", href: "/aro16/", img: "/images/pneu.png" },
-  { name: "Pneu Aro", highlight: "17", sub: "Pirelli", href: "/aro17/", img: "/images/pneu.png" },
-  { name: "Pneu Aro", highlight: "18", sub: "Pirelli", href: "/aro18/", img: "/images/pneu.png" },
-  { name: "Lavadora", highlight: "WAP Líder 2200", sub: "1750W", href: "/wap-lider-2200/", img: "/images/wap-lider-2200.png" },
-  { name: "Lavadora", highlight: "WAP WL 4000", sub: "1900W", href: "/wap-wl-4000/", img: "/images/wap-wl-4000.png" },
-  { name: "Lavadora", highlight: "WAP GTW Inox 15", sub: "1700W", href: "/wap-gtw-inox-15/", img: "/images/wap-gtw-inox-15.webp" },
-  { name: "Lavadora", highlight: "WAP High Speed Plus", sub: "2000W", href: "/wap-high-speed-plus/", img: "/images/wap-high-speed-plus.webp" },
+const categories = [
+  {
+    title: "Pneus",
+    icon: "fa-solid fa-car",
+    products: [
+      { name: "Pneu Aro", highlight: "13", sub: "Pirelli", href: "/aro13/", img: "/images/pneu.png" },
+      { name: "Pneu Aro", highlight: "14", sub: "Pirelli", href: "/aro14/", img: "/images/pneu.png" },
+      { name: "Pneu Aro", highlight: "15", sub: "Pirelli", href: "/aro15/", img: "/images/pneu.png" },
+      { name: "Pneu Aro", highlight: "16", sub: "Pirelli", href: "/aro16/", img: "/images/pneu.png" },
+      { name: "Pneu Aro", highlight: "17", sub: "Pirelli", href: "/aro17/", img: "/images/pneu.png" },
+      { name: "Pneu Aro", highlight: "18", sub: "Pirelli", href: "/aro18/", img: "/images/pneu.png" },
+    ],
+  },
+  {
+    title: "Cozinha",
+    icon: "fa-solid fa-utensils",
+    products: [
+      { name: "Jogo De Panelas", highlight: "Paris 10 Peças", sub: "Tramontina", href: "/panelas-tramontina/", img: "/panelas-tramontina/images/panelas-1.webp" },
+    ],
+  },
+  {
+    title: "Câmeras de Segurança",
+    icon: "fa-solid fa-video",
+    products: [
+      { name: "Câmera", highlight: "PTZ WIFI Lente Dupla", sub: "2MP+2MP", href: "/camera-ptz/", img: "/camera-ptz/images/camera-ptz-2.png" },
+    ],
+  },
+  {
+    title: "Lavadoras WAP",
+    icon: "fa-solid fa-shower",
+    products: [
+      { name: "Lavadora", highlight: "WAP Líder 2200", sub: "1750W", href: "/wap-lider-2200/", img: "/images/wap-lider-2200.png" },
+      { name: "Lavadora", highlight: "WAP WL 4000", sub: "1900W", href: "/wap-wl-4000/", img: "/wap-wl-4000/images/wap-wl-4000.png" },
+      { name: "Lavadora", highlight: "WAP GTW Inox 15", sub: "1700W", href: "/wap-gtw-inox-15/", img: "/wap-gtw-inox-15/images/gtw-inox-1.webp" },
+      { name: "Lavadora", highlight: "WAP High Speed Plus", sub: "2000W", href: "/wap-high-speed-plus/", img: "/wap-high-speed-plus/images/high-speed-1.webp" },
+    ],
+  },
 ];
 
 const Index = () => {
@@ -50,7 +76,6 @@ const Index = () => {
 
       {/* Content */}
       <div style={{ width: "100%", maxWidth: 600, margin: "0 auto", padding: "0 12px" }}>
-        {/* Banner */}
         <div style={{ margin: "12px 0", borderRadius: 8, overflow: "hidden" }}>
           <img src="/images/bannermion.webp" alt="Promoção" style={{ width: "100%", display: "block" }} />
         </div>
@@ -59,44 +84,50 @@ const Index = () => {
           Todos os Produtos
         </h1>
 
-        {/* Product List */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 12, paddingBottom: 20 }}>
-          {products.map((p) => (
-            <a
-              key={p.href}
-              href={p.href}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                backgroundColor: "#fff",
-                padding: "18px 16px",
-                textDecoration: "none",
-                color: "#333",
-                boxShadow: "0 1px 2px 0 rgba(0,0,0,0.15)",
-                borderRadius: 6,
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                <div style={{ width: 68, height: 68, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <img src={p.img} alt={p.highlight} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
-                </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                  <span style={{ fontSize: 14, fontWeight: 400, lineHeight: 1.25, color: "rgba(0,0,0,0.9)" }}>
-                    {p.name} <strong style={{ fontWeight: 700, fontSize: 15 }}>{p.highlight}</strong> {p.sub}
-                  </span>
-                  <span style={{ fontSize: 12, color: "#00a650", fontWeight: 500, display: "flex", alignItems: "center", gap: 4 }}>
-                    Frete grátis
-                    <span style={{ fontWeight: 900, fontStyle: "italic", color: "#00a650" }}>
-                      FULL<i className="fa-solid fa-bolt" style={{ fontSize: 10, marginLeft: 1 }} />
-                    </span>
-                  </span>
-                </div>
-              </div>
-              <i className="fa-solid fa-chevron-right" style={{ color: "#3483fa", fontSize: 16, fontWeight: 900 }} />
-            </a>
-          ))}
-        </div>
+        {categories.map((cat) => (
+          <div key={cat.title}>
+            <h2 style={{ color: "#333", fontSize: 15, fontWeight: 600, margin: "18px 0 10px 4px", display: "flex", alignItems: "center", gap: 8 }}>
+              <i className={cat.icon} style={{ fontSize: 14, color: "#3483fa" }} /> {cat.title}
+            </h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 20 }}>
+              {cat.products.map((p) => (
+                <a
+                  key={p.href}
+                  href={p.href}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    backgroundColor: "#fff",
+                    padding: "18px 16px",
+                    textDecoration: "none",
+                    color: "#333",
+                    boxShadow: "0 1px 2px 0 rgba(0,0,0,0.15)",
+                    borderRadius: 6,
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                    <div style={{ width: 68, height: 68, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <img src={p.img} alt={p.highlight} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                      <span style={{ fontSize: 14, fontWeight: 400, lineHeight: 1.25, color: "rgba(0,0,0,0.9)" }}>
+                        {p.name} <strong style={{ fontWeight: 700, fontSize: 15 }}>{p.highlight}</strong> {p.sub}
+                      </span>
+                      <span style={{ fontSize: 12, color: "#00a650", fontWeight: 500, display: "flex", alignItems: "center", gap: 4 }}>
+                        Frete grátis
+                        <span style={{ fontWeight: 900, fontStyle: "italic", color: "#00a650" }}>
+                          FULL<i className="fa-solid fa-bolt" style={{ fontSize: 10, marginLeft: 1 }} />
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <i className="fa-solid fa-chevron-right" style={{ color: "#3483fa", fontSize: 16, fontWeight: 900 }} />
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Footer */}
